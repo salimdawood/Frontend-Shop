@@ -17,8 +17,14 @@ export const ModalProvider = ({children}) => {
   const {sideBar:{cssDiv}} = useContext(SideBarContext)
 
   useEffect(()=>{
-      console.log("sheets state changed....")
+    try{
       localStorage.setItem('sheets',JSON.stringify(sheets))
+    }catch(e){
+      if(e.code===2)
+      {
+        window.alert('Changes can\'t be saved  due to full storage, please delete some sheets or properties...')
+      }
+    }
   },[sheets])
 
   //methods

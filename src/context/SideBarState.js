@@ -39,7 +39,7 @@ export const SideBarProvider = ({children}) => {
     }catch(e){
       if(e.code===22)
       {
-        window.alert('Storage is full, please delete some sheets or properties...')
+        window.alert('Changes can\'t be saved  due to full storage, please delete some sheets or properties...')
       }
     }
 
