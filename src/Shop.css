@@ -59,6 +59,11 @@
   text-decoration: none;
   font-weight: bold;
   transition: all .3s ease-in;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 .card-container-1 .lower-container .btn:hover{
   background-color:transparent;
@@ -67,6 +72,7 @@
 }
 /*CARD_STYLE_2*/
 .card-shaded{
+  width:min-content;
   display: grid;
   grid-template-columns: 300px;
   grid-template-rows: 210px 210px 80px;
@@ -77,6 +83,7 @@
   text-align: center;
 }
 .card{
+  width: min-content;
   display: grid;
   grid-template-columns: 300px;
   grid-template-rows: 210px 210px 80px;
@@ -272,6 +279,7 @@
   color: white;
   border: 1px solid #7F00FF;
   border-radius: 5px;
+  cursor: pointer;
 }
 .card-container-2 .lower-container .btn-clicked{
   padding: 10px 20px;
@@ -279,6 +287,7 @@
   color: #7F00FF;
   border: 1px solid #7F00FF;
   border-radius: 5px;
+  cursor:pointer
 }
 .card-container-2 .lower-container .media-container{
   width: 100%;
@@ -376,6 +385,11 @@
   font-weight: bold;
   transition: all .3s ease-in;
   cursor: pointer;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 .card-container-3 .lower-container .btn:hover{
   background-color:transparent;
@@ -465,7 +479,7 @@
 .footer-container-1{
   width: 100%;
   height: auto;
-  padding: 10px 20px;
+  padding: 20px 30px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -504,6 +518,9 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+  list-style: none;
+}
+.footer-container-1 .col-list ul{
   list-style: none;
 }
 .footer-container-1 .col-icon ul svg{
@@ -674,6 +691,7 @@
 }
 /*FROM-STYLE-2*/
 .form-container-2{
+  width: 300px;
   height: auto;
   padding: 40px;
   display: flex;
@@ -686,6 +704,7 @@
 }
 .form-container-2 input:not([type='button']){
   padding: 5px;
+  width: 100%;
 }
 .form-container-2 input[type='button']{
   margin-top: 10px;
