@@ -34,7 +34,15 @@ export const SideBarProvider = ({children}) => {
   const [state, dispatch] = useReducer(SideBarReducer, initialState)
 
   useEffect(() => {
-    localStorage.setItem('favorites',JSON.stringify(state.favoritesArray))
+    try{
+      localStorage.setItem('favorites',JSON.stringify(state.favoritesArray))
+    }catch(e){
+      if(e.code===22)
+      {
+        window.alert('Storage is full, please delete some sheets or properties...')
+      }
+    }
+
   }, [state.favoritesArray])
   
 
