@@ -48,6 +48,8 @@
   text-align: center;
 }
 .card-container-1 .lower-container .btn{
+  text-decoration: none;
+  color: inherit;
   padding:12px 20px;
   background-color: #7F00FF;
   border:2px solid #7F00FF;
@@ -57,7 +59,6 @@
   text-decoration: none;
   font-weight: bold;
   transition: all .3s ease-in;
-  cursor: pointer;
 }
 .card-container-1 .lower-container .btn:hover{
   background-color:transparent;
