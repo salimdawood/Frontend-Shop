@@ -2,6 +2,17 @@ import React, { createContext,useReducer,useEffect } from 'react'
 import SideBarReducer from '../Reducer/SideBarReducer'
 
 //getting the css properties from the stylesheet
+//for the server
+let i
+let cssSheet
+try{
+  cssSheet = document.styleSheets[0].cssRules
+}catch(e){
+  window.alert('couldn\'t acces the stylesheet')
+  cssSheet = []
+}
+//for local use
+/*
 let cssSheet
 try{
   cssSheet = document.styleSheets[2].cssRules
@@ -12,6 +23,12 @@ try{
 const cssDatatmp = {}
 for(var child of cssSheet){
   cssDatatmp[child.selectorText] = child.cssText.match(/\{.+\}/i)[0]
+}
+*/
+
+const cssDatatmp = {}
+for(i=84;i<cssSheet.length;i++){
+  cssDatatmp[cssSheet[i].selectorText] = cssSheet[i].cssText.match(/\{.+\}/i)[0]
 }
 const cssData = Object.entries(cssDatatmp)
 
