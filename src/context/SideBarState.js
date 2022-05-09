@@ -2,7 +2,13 @@ import React, { createContext,useReducer,useEffect } from 'react'
 import SideBarReducer from '../Reducer/SideBarReducer'
 
 //getting the css properties from the stylesheet
-const cssSheet = document.styleSheets[2].cssRules
+let cssSheet
+try{
+  cssSheet = document.styleSheets[2].cssRules
+}catch(e){
+  window.alert('couldn\'t acces the stylesheet')
+  cssSheet = []
+}
 const cssDatatmp = {}
 for(var child of cssSheet){
   cssDatatmp[child.selectorText] = child.cssText.match(/\{.+\}/i)[0]
