@@ -12,7 +12,7 @@ const FormStyle1 = ({className}) => {
           <label for="remember-user">Remember me</label>
         </div>
         <input type="submit" value="Submit"/>
-        <p>Forget your password?<a href="#"> Click here</a></p>
+        <p>Forget your password?<span> Click here</span></p>
       </div>
     </form> 
   )
