@@ -13,7 +13,7 @@ const CardStyle1 = ({className}) => {
         <h3>John Doe</h3>
         <h4>Front-end Developer</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, ducimus?</p>
-        <button className="btn" href="">View Profile</button>
+        <button className="btn">View Profile</button>
       </div>
     </div>
   )
